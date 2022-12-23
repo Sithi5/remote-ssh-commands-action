@@ -1,5 +1,9 @@
-name: ssh_remove_commands
+name: remote_ssh_commands
 description: 'Execute commands in a remote ssh server.'
+author: 'Sithi5'
+branding:
+  icon: 'terminal'
+  color: 'gray-dark'
 
 inputs:
   SSH_USER:
