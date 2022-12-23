@@ -1,0 +1,36 @@
+name: ssh_remove_commands
+description: "Execute commands in a remote ssh server."
+
+inputs:
+  SSH_USER:
+    description: 'secret'
+    required: true
+  SSH_PRIVATE_KEY:
+    description: 'secret'
+    required: true
+  SSH_HOST:
+    description: 'secret'
+    required: true
+  SSH_REMOTE_COMMAND:
+    description: 'command to execute in the remote server.'
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: 🔧 Configure SSH
+      run: |
+        mkdir -p ~/.ssh/
+        echo "${{ inputs.SSH_PRIVATE_KEY }}" > ~/.ssh/server.key
+        chmod 600 ~/.ssh/server.key
+        cat >>~/.ssh/config <<END
+        Host server
+          HostName ${{ inputs.SSH_HOST }}
+          User ${{ inputs.SSH_USER }}
+          IdentityFile ~/.ssh/server.key
+          StrictHostKeyChecking no
+        END
+      shell: bash
+    - name: 🔥 Execute ssh commands
+      run: ssh server ${{ inputs.SSH_REMOTE_COMMAND }}
+      shell: bash
