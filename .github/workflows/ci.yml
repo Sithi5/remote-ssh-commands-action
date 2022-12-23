@@ -11,7 +11,7 @@ jobs:
       - name: Calling ssh_remote_commands action
         uses: ./
         with:
-          SSH_USER: ${{ secrets.SSH_BASTION_USER }}
+          SSH_USER: ${{ secrets.SSH_USER }}
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SSH_HOST: ${{ secrets.SSH_BASTION_HOST }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
           SSH_REMOTE_COMMAND: ls -la
