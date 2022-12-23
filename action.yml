@@ -1,5 +1,5 @@
 name: ssh_remove_commands
-description: "Execute commands in a remote ssh server."
+description: 'Execute commands in a remote ssh server.'
 
 inputs:
   SSH_USER:
@@ -11,12 +11,12 @@ inputs:
   SSH_HOST:
     description: 'secret'
     required: true
-  SSH_REMOTE_COMMAND:
+  SSH_REMOTE_COMMANDS:
     description: 'command to execute in the remote server.'
     required: true
 
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
     - name: 🔧 Configure SSH
       run: |
@@ -32,5 +32,5 @@ runs:
         END
       shell: bash
     - name: 🔥 Execute ssh commands
-      run: ssh server ${{ inputs.SSH_REMOTE_COMMAND }}
+      run: ssh server ${{ inputs.SSH_REMOTE_COMMANDS }}
       shell: bash
