@@ -2,8 +2,10 @@
 
 ## How to use
 
+Put your secrets in your github secret repository, and add your bash commands separated with a `;`.
+
 ```yml
-uses: ./
+uses: Sithi5/remote-ssh-commands-action@main
     with:
         SSH_USER: ${{ secrets.SSH_USER }}
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
