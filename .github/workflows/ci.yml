@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   build:
-    name: Build
+    name: Execute bash commands in remote ssh host
     runs-on: ubuntu-latest
     steps:
       - name: Checkout to correct branch
