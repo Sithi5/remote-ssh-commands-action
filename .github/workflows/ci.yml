@@ -14,4 +14,4 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
-          SSH_REMOTE_COMMANDS: ls -la;pwd;echo "Hello World ! "; mkdir /var/www/preprod/dev.directbrico.fr/testing_ci
+          SSH_REMOTE_COMMANDS: "pwd; ls -la;pwd;echo 'Hello World ! '; mkdir /var/www/preprod/dev.directbrico.fr/testing_ci"
