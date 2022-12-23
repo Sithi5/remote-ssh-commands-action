@@ -1,5 +1,7 @@
 # [(remote-ssh-commands-action)](https://github.com/Sithi5/remote-ssh-commands-action)
 
+Execute command in a remote server with ssh private key.
+
 ## How to use
 
 Put your secrets in your github secret repository, and add your bash commands separated with a `;`.
