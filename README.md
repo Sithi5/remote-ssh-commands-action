@@ -17,3 +17,11 @@ uses: Sithi5/remote-ssh-commands-action@main
 ```
 
 An `exit` command is added by default after executing all inputs commands to close the ssh connection.
+
+## Input variables
+
+- `SSH_USER` - Required, ssh user
+- `SSH_PRIVATE_KEY` - Required, ssh private key
+- `SSH_HOST` - Required, ssh host address
+- `SSH_PORT` - Optional, default to 22, ssh port
+- `SSH_REMOTE_COMMANDS` - Bash commands to execute in the remote server. For multiple commands, separate them with `;`
