@@ -15,4 +15,4 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
           SSH_PORT: ${{ secrets.SSH_PORT }}
-          SSH_REMOTE_COMMANDS: pwd; ls -la;echo 'Hello World ! ';pwd
+          SSH_REMOTE_COMMANDS: pwd; echo 'Hello World ! ';pwd
