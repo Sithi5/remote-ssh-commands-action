@@ -41,5 +41,5 @@ runs:
         END
       shell: bash
     - name: 🔥 Execute ssh commands
-      run: ssh server "${{ inputs.SSH_REMOTE_COMMANDS }}"
+      run: ssh server "${{ inputs.SSH_REMOTE_COMMANDS }}; exit"
       shell: bash
