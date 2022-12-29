@@ -12,5 +12,6 @@ uses: Sithi5/remote-ssh-commands-action@main
         SSH_USER: ${{ secrets.SSH_USER }}
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         SSH_HOST: ${{ secrets.SSH_HOST }}
+        SSH_PORT: 22
         SSH_REMOTE_COMMANDS: ls -la;pwd;echo "Hello World !"
 ```
