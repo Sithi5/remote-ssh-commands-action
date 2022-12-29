@@ -15,3 +15,5 @@ uses: Sithi5/remote-ssh-commands-action@main
         SSH_PORT: 22
         SSH_REMOTE_COMMANDS: ls -la;pwd;echo "Hello World !"
 ```
+
+An `exit` command is added by default after executing all inputs commands to close the ssh connection.
